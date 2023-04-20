@@ -1,0 +1,13 @@
+<div class="recipes-container">
+    <div class="categories-container">
+        <div *ngFor="let cat of categories" class="category">
+            <h2>{{cat.name}}</h2>
+            <div class="recipes-wrapper">
+                <ng-container *ngFor="let recipe of cat.recipes">
+                    <app-recipe-card [recipe]="recipe"></app-recipe-card>
+                </ng-container>
+                <app-recipe-card [categoryId]="cat.id" [addNew]="true" (addToCategory)="addToCategory($event)"></app-recipe-card>
+            </div>
+        </div>
+    </div>
+</div>

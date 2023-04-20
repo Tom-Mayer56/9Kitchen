@@ -1,0 +1,25 @@
+<div *ngIf="recipe" class="recipe">
+    <div class="img-wrapper">
+
+    </div>
+    <div class="title">
+        {{recipe.name}}
+    </div>
+    <div class="description">
+        {{recipe.recipe}}
+    </div>
+</div>
+<div *ngIf="addNew" class="recipe add">
+    <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input #nameInput matInput>
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+        <mat-label>Recipe</mat-label>
+        <textarea #recipeInput matInput></textarea>
+    </mat-form-field>
+    <button mat-button color="primary" (click)="addRecipe(nameInput.value, recipeInput.value, categoryId)">
+        <fa-icon [icon]="faPlus"></fa-icon>
+        Add Recipe
+    </button>
+</div>

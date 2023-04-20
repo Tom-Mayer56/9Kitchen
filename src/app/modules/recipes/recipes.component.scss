@@ -1,0 +1,25 @@
+.recipes-container {
+    .categories-container {
+        padding: 20px;
+
+        .category {
+            h2 {
+                font-size: 42px;
+                padding: 0 20px 10px;
+                border-bottom: 4px solid #673ab7;
+                display: inline-block;
+            }
+
+            .recipes-wrapper {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 20px;
+
+                app-recipe-card {
+                    width: calc(25% - 40px);
+                    margin: 20px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.recipe {
+    padding-bottom: 20px;
+    border-bottom: 2px solid #673ab7;
+
+    .img-wrapper {
+        min-height: 300px;
+        background-color: #CCC;
+    }
+
+    .title {
+        font-size: 22px;
+        color: #673ab7;
+        padding: 10px 0;
+        font-weight: bold;
+    }
+
+    &.add {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-bottom: none;
+        min-height: 400px;
+    }
+}

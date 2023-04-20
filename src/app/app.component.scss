@@ -1,0 +1,32 @@
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid #673ab7;
+    min-height: 70px;
+    padding: 0 20px;
+
+    .title {
+        font-size: 22px;
+
+        .ng-fa-icon {
+            margin-right: 5px;
+            color: #673ab7;
+        }
+    }
+    
+    .nav {
+        flex-grow: 1;
+        font-size: 20px;
+        padding: 0 20px;
+    }
+
+    .buttons {
+        font-size: 22px;
+        color: #673ab7;
+        padding: 10px;
+
+        .ng-fa-icon {
+            cursor: pointer;
+        }
+    }
+}

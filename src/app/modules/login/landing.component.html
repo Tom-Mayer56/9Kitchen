@@ -1,0 +1,42 @@
+<div class="login-container">
+    <ng-container [ngSwitch]="loginState">
+        <div class="login-wrapper" *ngSwitchCase="'login'">
+            <h3>Login</h3>
+            <div class="form">
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input #emailInput matInput>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input #passwordInput matInput>
+                </mat-form-field>
+            </div>
+            <div class="buttons">
+                <button mat-button color="primary" (click)="login(emailInput.value, passwordInput.value)">Login</button>
+            </div>
+            <span>Not a member? Register <a (click)="loginState = 'register'">here</a></span>
+        </div>
+        <div class="login-wrapper" *ngSwitchCase="'register'">
+            <h3>Register</h3>
+            <div class="form">
+                <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input #emailInput matInput>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Password</mat-label>
+                    <input #passwordInput matInput>
+                </mat-form-field>
+                <mat-form-field appearance="fill">
+                    <mat-label>Re-enter Password</mat-label>
+                    <input #repasswordInput matInput>
+                </mat-form-field>
+            </div>
+            <div class="buttons">
+                <button mat-button color="primary" (click)="register(emailInput.value, passwordInput.value, repasswordInput.value)">Register</button>
+            </div>
+            <span>Already a member? Login <a (click)="loginState = 'login'">here</a></span>
+        </div>
+    </ng-container>
+</div>
