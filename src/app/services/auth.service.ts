@@ -6,7 +6,7 @@ import { ApiService } from './api.service';
 })
 export class AuthService {
 
-	token?: string = '15|AWBlSzfLiaM9ggyhkC8myEM2cCAjtY8oHlBARR9O';
+	token?: string;
 
 	constructor(
 		private apiService: ApiService
